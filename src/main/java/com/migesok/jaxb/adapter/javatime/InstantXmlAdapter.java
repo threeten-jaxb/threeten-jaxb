@@ -6,7 +6,7 @@ import java.time.format.DateTimeFormatter;
 /**
  * {@link javax.xml.bind.annotation.adapters.XmlAdapter XmlAdapter} mapping JSR-310 {@link java.time.Instant Instant}
  * to ISO-8601 string
- * <p/>
+ * <p>
  * String format details: {@link java.time.format.DateTimeFormatter#ISO_INSTANT ISO_INSTANT}
  *
  * @author Mikhail Sokolov

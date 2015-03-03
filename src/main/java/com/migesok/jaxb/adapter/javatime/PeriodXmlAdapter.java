@@ -6,9 +6,9 @@ import java.time.Period;
 /**
  * {@link javax.xml.bind.annotation.adapters.XmlAdapter XmlAdapter} mapping JSR-310
  * {@link java.time.Period Period} to ISO-8601 string
- * <p/>
- * String format details:<br/>
- * {@link java.time.Period#parse(java.lang.CharSequence)}<br/>
+ * <p>
+ * String format details:<br>
+ * {@link java.time.Period#parse(java.lang.CharSequence)}<br>
  * {@link java.time.Period#toString()}
  *
  * @author Mikhail Sokolov

@@ -6,7 +6,7 @@ import java.time.format.DateTimeFormatter;
 /**
  * {@link javax.xml.bind.annotation.adapters.XmlAdapter XmlAdapter} mapping JSR-310
  * {@link java.time.OffsetTime OffsetTime} to ISO-8601 string
- * <p/>
+ * <p>
  * String format details: {@link java.time.format.DateTimeFormatter#ISO_OFFSET_TIME ISO_OFFSET_TIME}
  *
  * @author Mikhail Sokolov

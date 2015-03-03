@@ -6,9 +6,9 @@ import java.time.Duration;
 /**
  * {@link javax.xml.bind.annotation.adapters.XmlAdapter XmlAdapter} mapping JSR-310
  * {@link java.time.Duration Duration} to ISO-8601 string
- * <p/>
- * String format details:<br/>
- * {@link java.time.Duration#parse(java.lang.CharSequence)}<br/>
+ * <p>
+ * String format details:<br>
+ * {@link java.time.Duration#parse(java.lang.CharSequence)}<br>
  * {@link java.time.Duration#toString()}
  *
  * @author Mikhail Sokolov

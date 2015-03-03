@@ -12,7 +12,7 @@ import static java.util.Objects.requireNonNull;
  * {@link javax.xml.bind.annotation.adapters.XmlAdapter XmlAdapter} mapping any JSR-310
  * {@link java.time.temporal.TemporalAccessor TemporalAccessor} to string using provided
  * {@link java.time.format.DateTimeFormatter DateTimeFormatter}
- * <p/>
+ * <p>
  * Example:
  * <pre>
  * {@code
