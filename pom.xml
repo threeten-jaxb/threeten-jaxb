@@ -8,7 +8,36 @@
   <packaging>jar</packaging>
 
   <name>jaxb-java-time-adapters</name>
-  <url>http://maven.apache.org</url>
+  <url>https://github.com/migesok/jaxb-java-time-adapters</url>
+  <description>JAXB adapters for Java 8 Date and Time API (JSR-310) types</description>
+
+  <issueManagement>
+    <system>GitHub</system>
+    <url>https://github.com/migesok/jaxb-java-time-adapters/issues</url>
+  </issueManagement>
+  <inceptionYear>2015</inceptionYear>
+  <developers>
+    <developer>
+      <id>migesok</id>
+      <name>Mikhail Sokolov</name>
+      <roles>
+        <role>Project Lead</role>
+      </roles>
+      <url>https://github.com/migesok</url>
+    </developer>
+  </developers>
+  <licenses>
+    <license>
+      <name>Apache 2</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <scm>
+    <connection>scm:git:git@github.com:migesok/jaxb-java-time-adapters.git</connection>
+    <developerConnection>scm:git:git@github.com:migesok/jaxb-java-time-adapters.git</developerConnection>
+    <url>https://github.com/migesok/jaxb-java-time-adapters</url>
+  </scm>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
