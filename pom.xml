@@ -4,7 +4,7 @@
 
   <groupId>com.migesok</groupId>
   <artifactId>jaxb-java-time-adapters</artifactId>
-  <version>1.0</version>
+  <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>jaxb-java-time-adapters</name>
