@@ -3,7 +3,7 @@
 
   <groupId>com.migesok</groupId>
   <artifactId>jaxb-java-time-adapters</artifactId>
-  <version>1.1.1</version>
+  <version>1.1.2-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>jaxb-java-time-adapters</name>
@@ -36,7 +36,7 @@
     <connection>scm:git:git@github.com:migesok/jaxb-java-time-adapters.git</connection>
     <developerConnection>scm:git:git@github.com:migesok/jaxb-java-time-adapters.git</developerConnection>
     <url>https://github.com/migesok/jaxb-java-time-adapters</url>
-    <tag>v1.1.1</tag>
+    <tag>HEAD</tag>
   </scm>
   <distributionManagement>
     <repository>
