@@ -8,8 +8,6 @@ import java.time.format.DateTimeFormatter;
  * {@link java.time.LocalDate LocalDate} to ISO-8601 string
  * <p>
  * String format details: {@link java.time.format.DateTimeFormatter#ISO_LOCAL_DATE ISO_LOCAL_DATE}
- *
- * @author Mikhail Sokolov
  */
 public class LocalDateXmlAdapter extends TemporalAccessorXmlAdapter<LocalDate> {
     public LocalDateXmlAdapter() {

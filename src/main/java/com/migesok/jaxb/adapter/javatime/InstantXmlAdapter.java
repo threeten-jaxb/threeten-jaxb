@@ -8,8 +8,6 @@ import java.time.format.DateTimeFormatter;
  * to ISO-8601 string
  * <p>
  * String format details: {@link java.time.format.DateTimeFormatter#ISO_INSTANT ISO_INSTANT}
- *
- * @author Mikhail Sokolov
  */
 public class InstantXmlAdapter extends TemporalAccessorXmlAdapter<Instant> {
     public InstantXmlAdapter() {

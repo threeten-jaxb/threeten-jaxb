@@ -10,8 +10,6 @@ import java.time.Duration;
  * String format details:<br>
  * {@link java.time.Duration#parse(java.lang.CharSequence)}<br>
  * {@link java.time.Duration#toString()}
- *
- * @author Mikhail Sokolov
  */
 public class DurationXmlAdapter extends XmlAdapter<String, Duration> {
     @Override

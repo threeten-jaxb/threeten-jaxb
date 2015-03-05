@@ -8,8 +8,6 @@ import java.time.format.DateTimeFormatter;
  * {@link java.time.ZonedDateTime ZonedDateTime} to ISO-8601 string
  * <p>
  * String format details: {@link java.time.format.DateTimeFormatter#ISO_ZONED_DATE_TIME ISO_ZONED_DATE_TIME}
- *
- * @author Mikhail Sokolov
  */
 public class ZonedDateTimeXmlAdapter extends TemporalAccessorXmlAdapter<ZonedDateTime> {
     public ZonedDateTimeXmlAdapter() {

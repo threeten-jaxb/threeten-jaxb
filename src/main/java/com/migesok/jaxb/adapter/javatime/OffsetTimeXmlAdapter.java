@@ -8,8 +8,6 @@ import java.time.format.DateTimeFormatter;
  * {@link java.time.OffsetTime OffsetTime} to ISO-8601 string
  * <p>
  * String format details: {@link java.time.format.DateTimeFormatter#ISO_OFFSET_TIME ISO_OFFSET_TIME}
- *
- * @author Mikhail Sokolov
  */
 public class OffsetTimeXmlAdapter extends TemporalAccessorXmlAdapter<OffsetTime> {
     public OffsetTimeXmlAdapter() {

@@ -25,7 +25,6 @@ import static java.util.Objects.requireNonNull;
  * </pre>
  *
  * @param <T> mapped temporal type
- * @author Mikhail Sokolov
  */
 public class TemporalAccessorXmlAdapter<T extends TemporalAccessor> extends XmlAdapter<String, T> {
     private final DateTimeFormatter formatter;

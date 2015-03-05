@@ -10,8 +10,6 @@ import java.time.Period;
  * String format details:<br>
  * {@link java.time.Period#parse(java.lang.CharSequence)}<br>
  * {@link java.time.Period#toString()}
- *
- * @author Mikhail Sokolov
  */
 public class PeriodXmlAdapter extends XmlAdapter<String, Period> {
     @Override
