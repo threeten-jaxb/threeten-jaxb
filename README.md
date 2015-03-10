@@ -12,7 +12,7 @@ Provided adapters:
 
   Example:
   ```java
-  class DottedDateXmlAdapter extends TemporalAccessorXmlAdapter<LocalDate> {
+  public class DottedDateXmlAdapter extends TemporalAccessorXmlAdapter<LocalDate> {
       public DottedDateXmlAdapter() {
           super(DateTimeFormatter.ofPattern("dd.MM.yyyy"), LocalDate::from);
       }
