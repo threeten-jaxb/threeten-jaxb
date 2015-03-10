@@ -4,10 +4,12 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
 /**
- * {@link javax.xml.bind.annotation.adapters.XmlAdapter XmlAdapter} mapping JSR-310
- * {@link java.time.ZonedDateTime ZonedDateTime} to ISO-8601 string
+ * {@code XmlAdapter} mapping JSR-310 {@code ZonedDateTime} to ISO-8601 string
  * <p>
- * String format details: {@link java.time.format.DateTimeFormatter#ISO_ZONED_DATE_TIME ISO_ZONED_DATE_TIME}
+ * String format details: {@link java.time.format.DateTimeFormatter#ISO_ZONED_DATE_TIME}
+ *
+ * @see javax.xml.bind.annotation.adapters.XmlAdapter
+ * @see java.time.ZonedDateTime
  */
 public class ZonedDateTimeXmlAdapter extends TemporalAccessorXmlAdapter<ZonedDateTime> {
     public ZonedDateTimeXmlAdapter() {

@@ -4,10 +4,12 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 /**
- * {@link javax.xml.bind.annotation.adapters.XmlAdapter XmlAdapter} mapping JSR-310
- * {@link java.time.LocalDate LocalDate} to ISO-8601 string
+ * {@code XmlAdapter} mapping JSR-310 {@code LocalDate} to ISO-8601 string
  * <p>
- * String format details: {@link java.time.format.DateTimeFormatter#ISO_LOCAL_DATE ISO_LOCAL_DATE}
+ * String format details: {@link java.time.format.DateTimeFormatter#ISO_LOCAL_DATE}
+ *
+ * @see javax.xml.bind.annotation.adapters.XmlAdapter
+ * @see java.time.LocalDate
  */
 public class LocalDateXmlAdapter extends TemporalAccessorXmlAdapter<LocalDate> {
     public LocalDateXmlAdapter() {

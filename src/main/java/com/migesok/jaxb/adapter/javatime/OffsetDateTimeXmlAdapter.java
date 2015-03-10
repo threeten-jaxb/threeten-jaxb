@@ -4,10 +4,12 @@ import java.time.OffsetDateTime;
 import java.time.format.DateTimeFormatter;
 
 /**
- * {@link javax.xml.bind.annotation.adapters.XmlAdapter XmlAdapter} mapping JSR-310
- * {@link java.time.OffsetDateTime OffsetDateTime} to ISO-8601 string
+ * {@code XmlAdapter} mapping JSR-310 {@code OffsetDateTime} to ISO-8601 string
  * <p>
- * String format details: {@link java.time.format.DateTimeFormatter#ISO_OFFSET_DATE_TIME ISO_OFFSET_DATE_TIME}
+ * String format details: {@link java.time.format.DateTimeFormatter#ISO_OFFSET_DATE_TIME}
+ *
+ * @see javax.xml.bind.annotation.adapters.XmlAdapter
+ * @see java.time.OffsetDateTime
  */
 public class OffsetDateTimeXmlAdapter extends TemporalAccessorXmlAdapter<OffsetDateTime> {
     public OffsetDateTimeXmlAdapter() {

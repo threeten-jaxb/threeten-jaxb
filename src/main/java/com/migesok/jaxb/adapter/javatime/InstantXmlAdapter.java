@@ -4,10 +4,12 @@ import java.time.Instant;
 import java.time.format.DateTimeFormatter;
 
 /**
- * {@link javax.xml.bind.annotation.adapters.XmlAdapter XmlAdapter} mapping JSR-310 {@link java.time.Instant Instant}
- * to ISO-8601 string
+ * {@code XmlAdapter} mapping JSR-310 {@code Instant} to ISO-8601 string
  * <p>
- * String format details: {@link java.time.format.DateTimeFormatter#ISO_INSTANT ISO_INSTANT}
+ * String format details: {@link java.time.format.DateTimeFormatter#ISO_INSTANT}
+ *
+ * @see javax.xml.bind.annotation.adapters.XmlAdapter
+ * @see java.time.Instant
  */
 public class InstantXmlAdapter extends TemporalAccessorXmlAdapter<Instant> {
     public InstantXmlAdapter() {

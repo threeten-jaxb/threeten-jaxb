@@ -4,12 +4,16 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import java.time.Duration;
 
 /**
- * {@link javax.xml.bind.annotation.adapters.XmlAdapter XmlAdapter} mapping JSR-310
- * {@link java.time.Duration Duration} to ISO-8601 string
+ * {@code XmlAdapter} mapping JSR-310 {@code Duration} to ISO-8601 string
  * <p>
- * String format details:<br>
- * {@link java.time.Duration#parse(java.lang.CharSequence)}<br>
- * {@link java.time.Duration#toString()}
+ * String format details:
+ * <ul>
+ * <li>{@link java.time.Duration#parse(java.lang.CharSequence)}</li>
+ * <li>{@link java.time.Duration#toString()}</li>
+ * </ul>
+ *
+ * @see javax.xml.bind.annotation.adapters.XmlAdapter
+ * @see java.time.Duration
  */
 public class DurationXmlAdapter extends XmlAdapter<String, Duration> {
     @Override

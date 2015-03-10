@@ -9,14 +9,12 @@ import java.time.temporal.TemporalQuery;
 import static java.util.Objects.requireNonNull;
 
 /**
- * {@link javax.xml.bind.annotation.adapters.XmlAdapter XmlAdapter} mapping any JSR-310
- * {@link java.time.temporal.TemporalAccessor TemporalAccessor} to string using provided
- * {@link java.time.format.DateTimeFormatter DateTimeFormatter}
+ * {@code XmlAdapter} mapping any JSR-310 {@code TemporalAccessor} to string using provided {@code DateTimeFormatter}
  * <p>
  * Example:
  * <pre>
  * {@code
- *  class DottedDateXmlAdapter extends TemporalAccessorXmlAdapter<LocalDate> {
+ *  public class DottedDateXmlAdapter extends TemporalAccessorXmlAdapter<LocalDate> {
  *      public DottedDateXmlAdapter() {
  *          super(DateTimeFormatter.ofPattern("dd.MM.yyyy"), LocalDate::from);
  *      }
@@ -25,6 +23,9 @@ import static java.util.Objects.requireNonNull;
  * </pre>
  *
  * @param <T> mapped temporal type
+ * @see javax.xml.bind.annotation.adapters.XmlAdapter
+ * @see java.time.temporal.TemporalAccessor
+ * @see java.time.format.DateTimeFormatter
  */
 public class TemporalAccessorXmlAdapter<T extends TemporalAccessor> extends XmlAdapter<String, T> {
     private final DateTimeFormatter formatter;

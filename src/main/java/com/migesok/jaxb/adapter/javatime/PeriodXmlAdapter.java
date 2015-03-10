@@ -4,12 +4,16 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import java.time.Period;
 
 /**
- * {@link javax.xml.bind.annotation.adapters.XmlAdapter XmlAdapter} mapping JSR-310
- * {@link java.time.Period Period} to ISO-8601 string
+ * {@code XmlAdapter} mapping JSR-310 {@code Period} to ISO-8601 string
  * <p>
- * String format details:<br>
- * {@link java.time.Period#parse(java.lang.CharSequence)}<br>
- * {@link java.time.Period#toString()}
+ * String format details:
+ * <ul>
+ * <li>{@link java.time.Period#parse(java.lang.CharSequence)}</li>
+ * <li>{@link java.time.Period#toString()}</li>
+ * </ul>
+ *
+ * @see javax.xml.bind.annotation.adapters.XmlAdapter
+ * @see java.time.Period
  */
 public class PeriodXmlAdapter extends XmlAdapter<String, Period> {
     @Override
