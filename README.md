@@ -27,14 +27,18 @@ Provided adapters:
 * OffsetTimeXmlAdapter
 * PeriodXmlAdapter
 * ZonedDateTimeXmlAdapter
+* MonthDayXmlAdapter
+* YearMonthXmlAdapter
+* YearXmlAdapter
+* ZoneIdXmlAdapter - for JSR-310's ZoneId and ZoneOffset
 
 Source code is licensed under Apache 2.0 licence.
 
 ### Releases
-Release 1.1.1 is the current latest release.
+Release 1.1.2 is the current latest release.
 It depends on JDK 1.8 or later.
 
-Available in the [Maven Central repository](http://search.maven.org/#artifactdetails|com.migesok|jaxb-java-time-adapters|1.1.1|jar)
+Available in the [Maven Central repository](http://search.maven.org/#artifactdetails|com.migesok|jaxb-java-time-adapters|1.1.2|jar)
 
 ### Support
 Please use GitHub issues and Pull Requests for support.
