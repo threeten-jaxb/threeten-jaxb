@@ -16,6 +16,7 @@ import java.time.YearMonth;
 import java.time.ZoneId;
 import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
@@ -62,7 +63,8 @@ public class JaxbAdaptersTest {
         assertThat(bean.period, equalTo(Period.parse("P1Y2M3W4D")));
         assertThat(bean.instant, equalTo(Instant.parse("2007-12-03T10:15:30.00Z")));
         assertThat(bean.zonedDateTime, equalTo(ZonedDateTime.parse("2007-12-03T10:15:30+01:00[Europe/Paris]")));
-        assertThat(bean.localDate, equalTo(LocalDate.parse("2014-12-31")));
+        assertThat(bean.localDate, equalTo(LocalDate.parse("2014-12-31+01:00",DateTimeFormatter.ISO_DATE)));
+        assertThat(bean.localDate2, equalTo(LocalDate.parse("2014-12-31")));
         assertThat(bean.localDateTime, equalTo(LocalDateTime.parse("2007-12-03T10:15:30")));
         assertThat(bean.localTime, equalTo(LocalTime.parse("10:15:30")));
         assertThat(bean.offsetDateTime, equalTo(OffsetDateTime.parse("2007-12-03T10:15:30+01:00")));
@@ -93,6 +95,9 @@ public class JaxbAdaptersTest {
         @XmlElement
         @XmlJavaTypeAdapter(LocalDateXmlAdapter.class)
         public LocalDate localDate;
+        @XmlElement
+        @XmlJavaTypeAdapter(LocalDateXmlAdapter.class)
+        public LocalDate localDate2;
         @XmlElement
         @XmlJavaTypeAdapter(LocalDateTimeXmlAdapter.class)
         public LocalDateTime localDateTime;

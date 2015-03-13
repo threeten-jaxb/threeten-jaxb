@@ -5,6 +5,7 @@
   <instant>2007-12-03T10:15:30.00Z</instant>
   <zonedDateTime>2007-12-03T10:15:30+01:00[Europe/Paris]</zonedDateTime>
   <localDate>2014-12-31+01:00</localDate>
+  <localDate2>2014-12-31</localDate2>
   <localDateTime>2007-12-03T10:15:30</localDateTime>
   <localTime>10:15:30</localTime>
   <offsetDateTime>2007-12-03T10:15:30+01:00</offsetDateTime>
