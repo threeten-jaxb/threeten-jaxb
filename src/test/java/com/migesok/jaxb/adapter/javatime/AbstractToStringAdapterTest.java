@@ -1,12 +1,10 @@
 package com.migesok.jaxb.adapter.javatime;
 
-import org.junit.Before;
-import org.junit.Test;
-
+import java.lang.reflect.InvocationTargetException;
 import javax.annotation.Nonnull;
 import javax.xml.bind.annotation.adapters.XmlAdapter;
-import java.lang.reflect.InvocationTargetException;
-import java.time.format.DateTimeParseException;
+import org.junit.Before;
+import org.junit.Test;
 
 import static java.util.Objects.requireNonNull;
 import static org.hamcrest.Matchers.equalTo;
@@ -51,7 +49,7 @@ public abstract class AbstractToStringAdapterTest<T, A extends XmlAdapter<String
         assertThat(unmarshalledValue, equalTo(value));
     }
 
-    @Test(expected = DateTimeParseException.class)
+    @Test(expected = RuntimeException.class)
     public void unmarshalNotValidValue() throws Exception {
         adapter.unmarshal(requireNonNull(getNotValidStringValue()));
     }

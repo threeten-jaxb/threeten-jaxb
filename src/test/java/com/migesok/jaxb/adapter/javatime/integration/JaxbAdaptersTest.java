@@ -1,15 +1,43 @@
 package com.migesok.jaxb.adapter.javatime.integration;
 
-import com.migesok.jaxb.adapter.javatime.*;
-import org.junit.Before;
-import org.junit.Test;
-
+import java.time.DayOfWeek;
+import java.time.Duration;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.Month;
+import java.time.MonthDay;
+import java.time.OffsetDateTime;
+import java.time.OffsetTime;
+import java.time.Period;
+import java.time.Year;
+import java.time.YearMonth;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
+import java.time.ZonedDateTime;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
+import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import java.time.*;
+import javax.xml.bind.helpers.DefaultValidationEventHandler;
+import org.junit.Before;
+import org.junit.Test;
+import com.migesok.jaxb.adapter.javatime.DurationXmlAdapter;
+import com.migesok.jaxb.adapter.javatime.InstantXmlAdapter;
+import com.migesok.jaxb.adapter.javatime.LocalDateTimeXmlAdapter;
+import com.migesok.jaxb.adapter.javatime.LocalDateXmlAdapter;
+import com.migesok.jaxb.adapter.javatime.LocalTimeXmlAdapter;
+import com.migesok.jaxb.adapter.javatime.MonthDayXmlAdapter;
+import com.migesok.jaxb.adapter.javatime.OffsetDateTimeXmlAdapter;
+import com.migesok.jaxb.adapter.javatime.OffsetTimeXmlAdapter;
+import com.migesok.jaxb.adapter.javatime.PeriodXmlAdapter;
+import com.migesok.jaxb.adapter.javatime.YearMonthXmlAdapter;
+import com.migesok.jaxb.adapter.javatime.YearXmlAdapter;
+import com.migesok.jaxb.adapter.javatime.ZoneIdXmlAdapter;
+import com.migesok.jaxb.adapter.javatime.ZonedDateTimeXmlAdapter;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertNotNull;
@@ -25,7 +53,9 @@ public class JaxbAdaptersTest {
 
     @Test
     public void unmarshalBean() throws JAXBException {
-        Bean bean = (Bean) jaxbContext.createUnmarshaller().unmarshal(getClass().getResourceAsStream("/bean.xml"));
+        Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+        unmarshaller.setEventHandler(new DefaultValidationEventHandler());
+        Bean bean = (Bean) unmarshaller.unmarshal(getClass().getResourceAsStream("/bean.xml"));
 
         assertNotNull(bean);
         assertThat(bean.duration, equalTo(Duration.parse("P2DT3H4M")));
@@ -37,6 +67,13 @@ public class JaxbAdaptersTest {
         assertThat(bean.localTime, equalTo(LocalTime.parse("10:15:30")));
         assertThat(bean.offsetDateTime, equalTo(OffsetDateTime.parse("2007-12-03T10:15:30+01:00")));
         assertThat(bean.offsetTime, equalTo(OffsetTime.parse("10:15:30+01:00")));
+        assertThat(bean.month, equalTo(Month.FEBRUARY));
+        assertThat(bean.dayOfWeek, equalTo(DayOfWeek.WEDNESDAY));
+        assertThat(bean.year, equalTo(Year.of(-2014)));
+        assertThat(bean.yearMonth, equalTo(YearMonth.of(2014, 12)));
+        assertThat(bean.monthDay, equalTo(MonthDay.of(Month.DECEMBER, 3)));
+        assertThat(bean.zoneOffset, equalTo(ZoneOffset.ofHoursMinutes(-12, 0)));
+        assertThat(bean.zoneId, equalTo(ZoneId.of("America/New_York")));
     }
 
     @XmlRootElement
@@ -68,5 +105,24 @@ public class JaxbAdaptersTest {
         @XmlElement
         @XmlJavaTypeAdapter(OffsetTimeXmlAdapter.class)
         public OffsetTime offsetTime;
+        @XmlElement
+        public Month month;
+        @XmlElement
+        public DayOfWeek dayOfWeek;
+        @XmlElement
+        @XmlJavaTypeAdapter(YearXmlAdapter.class)
+        public Year year;
+        @XmlElement
+        @XmlJavaTypeAdapter(YearMonthXmlAdapter.class)
+        public YearMonth yearMonth;
+        @XmlElement
+        @XmlJavaTypeAdapter(MonthDayXmlAdapter.class)
+        public MonthDay monthDay;
+        @XmlElement
+        @XmlJavaTypeAdapter(ZoneIdXmlAdapter.class)
+        public ZoneOffset zoneOffset;
+        @XmlElement
+        @XmlJavaTypeAdapter(ZoneIdXmlAdapter.class)
+        public ZoneId zoneId;
     }
 }

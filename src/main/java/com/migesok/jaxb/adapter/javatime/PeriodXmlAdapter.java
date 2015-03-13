@@ -1,7 +1,7 @@
 package com.migesok.jaxb.adapter.javatime;
 
-import javax.xml.bind.annotation.adapters.XmlAdapter;
 import java.time.Period;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
 
 /**
  * {@code XmlAdapter} mapping JSR-310 {@code Period} to ISO-8601 string
@@ -17,12 +17,12 @@ import java.time.Period;
  */
 public class PeriodXmlAdapter extends XmlAdapter<String, Period> {
     @Override
-    public Period unmarshal(String stringValue) throws Exception {
+    public Period unmarshal(String stringValue) {
         return stringValue != null ? Period.parse(stringValue) : null;
     }
 
     @Override
-    public String marshal(Period value) throws Exception {
+    public String marshal(Period value) {
         return value != null ? value.toString() : null;
     }
 }

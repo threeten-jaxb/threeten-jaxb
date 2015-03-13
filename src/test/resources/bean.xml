@@ -9,4 +9,11 @@
   <localTime>10:15:30</localTime>
   <offsetDateTime>2007-12-03T10:15:30+01:00</offsetDateTime>
   <offsetTime>10:15:30+01:00</offsetTime>
+    <month>FEBRUARY</month>
+    <dayOfWeek>WEDNESDAY</dayOfWeek>
+    <year>-2014</year>
+    <yearMonth>2014-12</yearMonth>
+    <monthDay>--12-03</monthDay>
+    <zoneOffset>-12:00</zoneOffset>
+    <zoneId>America/New_York</zoneId>
 </bean>
