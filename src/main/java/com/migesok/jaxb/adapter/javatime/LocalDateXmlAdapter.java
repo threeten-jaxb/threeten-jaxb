@@ -13,6 +13,6 @@ import java.time.format.DateTimeFormatter;
  */
 public class LocalDateXmlAdapter extends TemporalAccessorXmlAdapter<LocalDate> {
     public LocalDateXmlAdapter() {
-        super(DateTimeFormatter.ISO_LOCAL_DATE, LocalDate::from);
+        super(DateTimeFormatter.ISO_DATE, LocalDate::from);
     }
 }

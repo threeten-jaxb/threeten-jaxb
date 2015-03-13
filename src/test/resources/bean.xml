@@ -4,7 +4,7 @@
   <period>P1Y2M3W4D</period>
   <instant>2007-12-03T10:15:30.00Z</instant>
   <zonedDateTime>2007-12-03T10:15:30+01:00[Europe/Paris]</zonedDateTime>
-  <localDate>2014-12-31</localDate>
+  <localDate>2014-12-31+01:00</localDate>
   <localDateTime>2007-12-03T10:15:30</localDateTime>
   <localTime>10:15:30</localTime>
   <offsetDateTime>2007-12-03T10:15:30+01:00</offsetDateTime>
