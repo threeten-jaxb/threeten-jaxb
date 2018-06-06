@@ -3,13 +3,13 @@ package com.migesok.jaxb.adapter.javatime;
 import java.lang.reflect.InvocationTargetException;
 import javax.annotation.Nonnull;
 import javax.xml.bind.annotation.adapters.XmlAdapter;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import static java.util.Objects.requireNonNull;
-import static org.hamcrest.Matchers.equalTo;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public abstract class AbstractToStringAdapterTest<T, A extends XmlAdapter<String, T>> {
 
@@ -24,7 +24,7 @@ public abstract class AbstractToStringAdapterTest<T, A extends XmlAdapter<String
 
     protected abstract String getNotValidStringValue();
 
-    @Before
+    @BeforeEach
     public void setUp()
             throws IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
         adapter = adapterClass.getConstructor().newInstance();
@@ -46,11 +46,11 @@ public abstract class AbstractToStringAdapterTest<T, A extends XmlAdapter<String
         String stringValue = adapter.marshal(value);
         T unmarshalledValue = adapter.unmarshal(stringValue);
 
-        assertThat(unmarshalledValue, equalTo(value));
+        assertEquals(unmarshalledValue, value);
     }
 
-    @Test(expected = RuntimeException.class)
+    @Test
     public void unmarshalNotValidValue() throws Exception {
-        adapter.unmarshal(requireNonNull(getNotValidStringValue()));
+        assertThrows(RuntimeException.class, () -> adapter.unmarshal(requireNonNull(getNotValidStringValue())));
     }
 }
