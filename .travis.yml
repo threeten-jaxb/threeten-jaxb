@@ -1,3 +1,24 @@
 language: java
+
+sudo: false
+dist: trusty
+
+os:
+- linux
+- osx
+
 jdk:
-  - oraclejdk8
+- openjdk8
+- oraclejdk8
+- openjdk11
+- oraclejdk11
+- openjdk-ea
+- oraclejdk-ea
+
+matrix:
+  exclude: # Not jet supported https://sormuras.github.io/blog/2018-05-31-jdk-matrix.html
+  - os: osx
+  - jdk:
+    - oraclejdk8
+    - oraclejdk11
+    - oraclejdk-ea
