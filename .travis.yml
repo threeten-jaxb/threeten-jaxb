@@ -18,7 +18,7 @@ jdk:
 matrix:
   exclude: # Not jet supported https://sormuras.github.io/blog/2018-05-31-jdk-matrix.html
   - os: osx
-  - jdk:
+    jdk:
     - oraclejdk8
     - oraclejdk11
     - oraclejdk-ea
