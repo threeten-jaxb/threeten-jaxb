@@ -27,7 +27,7 @@ import static java.util.Objects.requireNonNull;
  * @see java.time.temporal.TemporalAccessor
  * @see java.time.format.DateTimeFormatter
  */
-class TemporalAccessorXmlAdapter<T extends TemporalAccessor> extends XmlAdapter<String, T> {
+public class TemporalAccessorXmlAdapter<T extends TemporalAccessor> extends XmlAdapter<String, T> {
     private final DateTimeFormatter formatter;
     private final TemporalQuery<? extends T> temporalQuery;
 
