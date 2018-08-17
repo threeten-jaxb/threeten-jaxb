@@ -9,11 +9,8 @@ os:
 
 jdk:
 - openjdk8
-- oraclejdk8
 - openjdk11
-- oraclejdk11
 - openjdk-ea
-- oraclejdk-ea
 
 matrix:
   exclude: # Not jet supported https://sormuras.github.io/blog/2018-05-31-jdk-matrix.html
