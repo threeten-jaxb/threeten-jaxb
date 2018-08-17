@@ -7,12 +7,12 @@
   <packaging>jar</packaging>
 
   <name>jaxb-java-time-adapters</name>
-  <url>https://github.com/migesok/jaxb-java-time-adapters</url>
+  <url>https://github.com/jaxb-java-time-adapters/jaxb-java-time-adapters</url>
   <description>JAXB adapters for Java 8 Date and Time API (JSR-310) types</description>
 
   <issueManagement>
     <system>GitHub</system>
-    <url>https://github.com/migesok/jaxb-java-time-adapters/issues</url>
+    <url>https://github.com/jaxb-java-time-adapters/jaxb-java-time-adapters/issues</url>
   </issueManagement>
   <inceptionYear>2015</inceptionYear>
   <developers>
@@ -33,9 +33,9 @@
     </license>
   </licenses>
   <scm>
-    <connection>scm:git:git@github.com:migesok/jaxb-java-time-adapters.git</connection>
-    <developerConnection>scm:git:git@github.com:migesok/jaxb-java-time-adapters.git</developerConnection>
-    <url>https://github.com/migesok/jaxb-java-time-adapters</url>
+    <connection>scm:git:git@github.com:jaxb-java-time-adapters/jaxb-java-time-adapters.git</connection>
+    <developerConnection>scm:git:git@github.com:jaxb-java-time-adapters/jaxb-java-time-adapters.git</developerConnection>
+    <url>https://github.com/jaxb-java-time-adapters/jaxb-java-time-adapters</url>
     <tag>HEAD</tag>
   </scm>
   <distributionManagement>
