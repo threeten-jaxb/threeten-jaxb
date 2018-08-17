@@ -11,37 +11,37 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public abstract class AbstractToStringAdapterTest<T, A extends XmlAdapter<String, T>> {
+abstract class AbstractToStringAdapterTest<T, A extends XmlAdapter<String, T>> {
 
     private final Class<A> adapterClass;
-    protected A adapter;
+    private A adapter;
 
-    protected AbstractToStringAdapterTest(@Nonnull Class<A> adapterClass) {
+    AbstractToStringAdapterTest(@Nonnull Class<A> adapterClass) {
         this.adapterClass = requireNonNull(adapterClass);
     }
 
-    protected abstract T getNotNullValue();
+    abstract T getNotNullValue();
 
-    protected abstract String getNotValidStringValue();
+    abstract String getNotValidStringValue();
 
     @BeforeEach
-    public void setUp()
+    void setUp()
             throws IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
         adapter = adapterClass.getConstructor().newInstance();
     }
 
     @Test
-    public void marshallNull() throws Exception {
+    void marshallNull() throws Exception {
         assertNull(adapter.marshal(null));
     }
 
     @Test
-    public void unmarshalNull() throws Exception {
+    void unmarshalNull() throws Exception {
         assertNull(adapter.unmarshal(null));
     }
 
     @Test
-    public void marshallNotNullValue() throws Exception {
+    void marshallNotNullValue() throws Exception {
         T value = requireNonNull(getNotNullValue());
         String stringValue = adapter.marshal(value);
         T unmarshalledValue = adapter.unmarshal(stringValue);
@@ -50,7 +50,7 @@ public abstract class AbstractToStringAdapterTest<T, A extends XmlAdapter<String
     }
 
     @Test
-    public void unmarshalNotValidValue() throws Exception {
+    void unmarshalNotValidValue() throws Exception {
         assertThrows(RuntimeException.class, () -> adapter.unmarshal(requireNonNull(getNotValidStringValue())));
     }
 }

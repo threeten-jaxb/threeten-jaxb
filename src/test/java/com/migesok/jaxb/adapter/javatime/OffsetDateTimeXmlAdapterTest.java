@@ -2,20 +2,20 @@ package com.migesok.jaxb.adapter.javatime;
 
 import java.time.OffsetDateTime;
 
-public class OffsetDateTimeXmlAdapterTest
+class OffsetDateTimeXmlAdapterTest
         extends AbstractToStringAdapterTest<OffsetDateTime, OffsetDateTimeXmlAdapter> {
 
-    public OffsetDateTimeXmlAdapterTest() {
+    OffsetDateTimeXmlAdapterTest() {
         super(OffsetDateTimeXmlAdapter.class);
     }
 
     @Override
-    protected OffsetDateTime getNotNullValue() {
+    OffsetDateTime getNotNullValue() {
         return OffsetDateTime.parse("2007-12-03T10:15:30+01:00");
     }
 
     @Override
-    protected String getNotValidStringValue() {
+    String getNotValidStringValue() {
         return "blah-blah";
     }
 }

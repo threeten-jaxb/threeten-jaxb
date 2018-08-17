@@ -2,18 +2,18 @@ package com.migesok.jaxb.adapter.javatime;
 
 import java.time.LocalDate;
 
-public class LocalDateXmlAdapterTest extends AbstractToStringAdapterTest<LocalDate, LocalDateXmlAdapter> {
-    public LocalDateXmlAdapterTest() {
+class LocalDateXmlAdapterTest extends AbstractToStringAdapterTest<LocalDate, LocalDateXmlAdapter> {
+    LocalDateXmlAdapterTest() {
         super(LocalDateXmlAdapter.class);
     }
 
     @Override
-    protected LocalDate getNotNullValue() {
+    LocalDate getNotNullValue() {
         return LocalDate.of(2014, 12, 31);
     }
 
     @Override
-    protected String getNotValidStringValue() {
+    String getNotValidStringValue() {
         return "blah-blah";
     }
 }

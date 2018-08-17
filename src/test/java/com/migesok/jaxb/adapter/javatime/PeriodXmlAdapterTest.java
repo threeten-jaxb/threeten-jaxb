@@ -2,18 +2,18 @@ package com.migesok.jaxb.adapter.javatime;
 
 import java.time.Period;
 
-public class PeriodXmlAdapterTest extends AbstractToStringAdapterTest<Period, PeriodXmlAdapter> {
-    public PeriodXmlAdapterTest() {
+class PeriodXmlAdapterTest extends AbstractToStringAdapterTest<Period, PeriodXmlAdapter> {
+    PeriodXmlAdapterTest() {
         super(PeriodXmlAdapter.class);
     }
 
     @Override
-    protected Period getNotNullValue() {
+    Period getNotNullValue() {
         return Period.parse("P1Y2M3W4D");
     }
 
     @Override
-    protected String getNotValidStringValue() {
+    String getNotValidStringValue() {
         return "blah-blah";
     }
 }

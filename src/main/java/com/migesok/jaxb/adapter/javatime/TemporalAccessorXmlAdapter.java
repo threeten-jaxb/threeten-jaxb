@@ -27,7 +27,7 @@ import static java.util.Objects.requireNonNull;
  * @see java.time.temporal.TemporalAccessor
  * @see java.time.format.DateTimeFormatter
  */
-public class TemporalAccessorXmlAdapter<T extends TemporalAccessor> extends XmlAdapter<String, T> {
+class TemporalAccessorXmlAdapter<T extends TemporalAccessor> extends XmlAdapter<String, T> {
     private final DateTimeFormatter formatter;
     private final TemporalQuery<? extends T> temporalQuery;
 
@@ -35,8 +35,8 @@ public class TemporalAccessorXmlAdapter<T extends TemporalAccessor> extends XmlA
      * @param formatter     the formatter for printing and parsing, not null
      * @param temporalQuery the query defining the type to parse to, not null
      */
-    public TemporalAccessorXmlAdapter(@Nonnull DateTimeFormatter formatter,
-                                      @Nonnull TemporalQuery<? extends T> temporalQuery) {
+    TemporalAccessorXmlAdapter(@Nonnull DateTimeFormatter formatter,
+                               @Nonnull TemporalQuery<? extends T> temporalQuery) {
         this.formatter = requireNonNull(formatter, "formatter must not be null");
         this.temporalQuery = requireNonNull(temporalQuery, "temporal query must not be null");
     }

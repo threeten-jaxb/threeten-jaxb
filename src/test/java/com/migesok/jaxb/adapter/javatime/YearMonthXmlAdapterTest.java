@@ -2,18 +2,18 @@ package com.migesok.jaxb.adapter.javatime;
 
 import java.time.YearMonth;
 
-public class YearMonthXmlAdapterTest extends AbstractToStringAdapterTest<YearMonth, YearMonthXmlAdapter> {
-    public YearMonthXmlAdapterTest() {
+class YearMonthXmlAdapterTest extends AbstractToStringAdapterTest<YearMonth, YearMonthXmlAdapter> {
+    YearMonthXmlAdapterTest() {
         super(YearMonthXmlAdapter.class);
     }
 
     @Override
-    protected YearMonth getNotNullValue() {
+    YearMonth getNotNullValue() {
         return YearMonth.of(2014, 12);
     }
 
     @Override
-    protected String getNotValidStringValue() {
+    String getNotValidStringValue() {
         return "blah-blah";
     }
 }

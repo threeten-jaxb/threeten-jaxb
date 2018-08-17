@@ -43,16 +43,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-public class JaxbAdaptersTest {
+class JaxbAdaptersTest {
     private JAXBContext jaxbContext;
 
     @BeforeEach
-    public void setUp() throws JAXBException {
+    void setUp() throws JAXBException {
         jaxbContext = JAXBContext.newInstance(Bean.class);
     }
 
     @Test
-    public void unmarshalBean() throws JAXBException {
+    void unmarshalBean() throws JAXBException {
         Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
         unmarshaller.setEventHandler(new DefaultValidationEventHandler());
         Bean bean = (Bean) unmarshaller.unmarshal(getClass().getResourceAsStream("/bean.xml"));
@@ -79,55 +79,55 @@ public class JaxbAdaptersTest {
     }
 
     @XmlRootElement
-    public static class Bean {
+    static class Bean {
         @XmlElement
         @XmlJavaTypeAdapter(DurationXmlAdapter.class)
-        public Duration duration;
+        Duration duration;
         @XmlElement
         @XmlJavaTypeAdapter(PeriodXmlAdapter.class)
-        public Period period;
+        Period period;
         @XmlElement
         @XmlJavaTypeAdapter(InstantXmlAdapter.class)
-        public Instant instant;
+        Instant instant;
         @XmlElement
         @XmlJavaTypeAdapter(ZonedDateTimeXmlAdapter.class)
-        public ZonedDateTime zonedDateTime;
+        ZonedDateTime zonedDateTime;
         @XmlElement
         @XmlJavaTypeAdapter(LocalDateXmlAdapter.class)
-        public LocalDate localDate;
+        LocalDate localDate;
         @XmlElement
         @XmlJavaTypeAdapter(LocalDateXmlAdapter.class)
-        public LocalDate localDate2;
+        LocalDate localDate2;
         @XmlElement
         @XmlJavaTypeAdapter(LocalDateTimeXmlAdapter.class)
-        public LocalDateTime localDateTime;
+        LocalDateTime localDateTime;
         @XmlElement
         @XmlJavaTypeAdapter(LocalTimeXmlAdapter.class)
-        public LocalTime localTime;
+        LocalTime localTime;
         @XmlElement
         @XmlJavaTypeAdapter(OffsetDateTimeXmlAdapter.class)
-        public OffsetDateTime offsetDateTime;
+        OffsetDateTime offsetDateTime;
         @XmlElement
         @XmlJavaTypeAdapter(OffsetTimeXmlAdapter.class)
-        public OffsetTime offsetTime;
+        OffsetTime offsetTime;
         @XmlElement
-        public Month month;
+        Month month;
         @XmlElement
-        public DayOfWeek dayOfWeek;
+        DayOfWeek dayOfWeek;
         @XmlElement
         @XmlJavaTypeAdapter(YearXmlAdapter.class)
-        public Year year;
+        Year year;
         @XmlElement
         @XmlJavaTypeAdapter(YearMonthXmlAdapter.class)
-        public YearMonth yearMonth;
+        YearMonth yearMonth;
         @XmlElement
         @XmlJavaTypeAdapter(MonthDayXmlAdapter.class)
-        public MonthDay monthDay;
+        MonthDay monthDay;
         @XmlElement
         @XmlJavaTypeAdapter(ZoneIdXmlAdapter.class)
-        public ZoneOffset zoneOffset;
+        ZoneOffset zoneOffset;
         @XmlElement
         @XmlJavaTypeAdapter(ZoneIdXmlAdapter.class)
-        public ZoneId zoneId;
+        ZoneId zoneId;
     }
 }
