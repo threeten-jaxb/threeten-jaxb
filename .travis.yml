@@ -1,3 +1,13 @@
 language: java
+
+sudo: false
+dist: trusty
+
+os:
+  - linux
+  - osx
+
 jdk:
-  - oraclejdk8
+  - openjdk8
+  - openjdk11
+  - openjdk-ea

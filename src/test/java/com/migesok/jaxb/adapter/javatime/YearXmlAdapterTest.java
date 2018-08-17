@@ -2,17 +2,17 @@ package com.migesok.jaxb.adapter.javatime;
 
 import java.time.DateTimeException;
 import java.time.Year;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.Matchers.equalTo;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class YearXmlAdapterTest {
     private YearXmlAdapter adapter;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         adapter = new YearXmlAdapter();
     }
@@ -33,11 +33,11 @@ public class YearXmlAdapterTest {
         Integer marshaledValue = adapter.marshal(value);
         Year unmarshalledValue = adapter.unmarshal(marshaledValue);
 
-        assertThat(unmarshalledValue, equalTo(value));
+        assertEquals(unmarshalledValue, value);
     }
 
-    @Test(expected = DateTimeException.class)
+    @Test
     public void unmarshalNotValidValue() throws Exception {
-        adapter.unmarshal(Integer.MIN_VALUE);
+        assertThrows(DateTimeException.class, () -> adapter.unmarshal(Integer.MIN_VALUE));
     }
 }

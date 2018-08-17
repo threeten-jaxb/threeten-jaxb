@@ -24,8 +24,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.bind.helpers.DefaultValidationEventHandler;
-import org.junit.Before;
-import org.junit.Test;
 import com.migesok.jaxb.adapter.javatime.DurationXmlAdapter;
 import com.migesok.jaxb.adapter.javatime.InstantXmlAdapter;
 import com.migesok.jaxb.adapter.javatime.LocalDateTimeXmlAdapter;
@@ -39,15 +37,16 @@ import com.migesok.jaxb.adapter.javatime.YearMonthXmlAdapter;
 import com.migesok.jaxb.adapter.javatime.YearXmlAdapter;
 import com.migesok.jaxb.adapter.javatime.ZoneIdXmlAdapter;
 import com.migesok.jaxb.adapter.javatime.ZonedDateTimeXmlAdapter;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.Matchers.equalTo;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class JaxbAdaptersTest {
     private JAXBContext jaxbContext;
 
-    @Before
+    @BeforeEach
     public void setUp() throws JAXBException {
         jaxbContext = JAXBContext.newInstance(Bean.class);
     }
@@ -59,23 +58,24 @@ public class JaxbAdaptersTest {
         Bean bean = (Bean) unmarshaller.unmarshal(getClass().getResourceAsStream("/bean.xml"));
 
         assertNotNull(bean);
-        assertThat(bean.duration, equalTo(Duration.parse("P2DT3H4M")));
-        assertThat(bean.period, equalTo(Period.parse("P1Y2M3W4D")));
-        assertThat(bean.instant, equalTo(Instant.parse("2007-12-03T10:15:30.00Z")));
-        assertThat(bean.zonedDateTime, equalTo(ZonedDateTime.parse("2007-12-03T10:15:30+01:00[Europe/Paris]")));
-        assertThat(bean.localDate, equalTo(LocalDate.parse("2014-12-31+01:00",DateTimeFormatter.ISO_DATE)));
-        assertThat(bean.localDate2, equalTo(LocalDate.parse("2014-12-31")));
-        assertThat(bean.localDateTime, equalTo(LocalDateTime.parse("2007-12-03T10:15:30")));
-        assertThat(bean.localTime, equalTo(LocalTime.parse("10:15:30")));
-        assertThat(bean.offsetDateTime, equalTo(OffsetDateTime.parse("2007-12-03T10:15:30+01:00")));
-        assertThat(bean.offsetTime, equalTo(OffsetTime.parse("10:15:30+01:00")));
-        assertThat(bean.month, equalTo(Month.FEBRUARY));
-        assertThat(bean.dayOfWeek, equalTo(DayOfWeek.WEDNESDAY));
-        assertThat(bean.year, equalTo(Year.of(-2014)));
-        assertThat(bean.yearMonth, equalTo(YearMonth.of(2014, 12)));
-        assertThat(bean.monthDay, equalTo(MonthDay.of(Month.DECEMBER, 3)));
-        assertThat(bean.zoneOffset, equalTo(ZoneOffset.ofHoursMinutes(-12, 0)));
-        assertThat(bean.zoneId, equalTo(ZoneId.of("America/New_York")));
+        assertEquals(bean.duration, Duration.parse("P2DT3H4M"));
+        assertEquals(bean.duration, Duration.parse("P2DT3H4M"));
+        assertEquals(bean.period, Period.parse("P1Y2M3W4D"));
+        assertEquals(bean.instant, Instant.parse("2007-12-03T10:15:30.00Z"));
+        assertEquals(bean.zonedDateTime, ZonedDateTime.parse("2007-12-03T10:15:30+01:00[Europe/Paris]"));
+        assertEquals(bean.localDate, LocalDate.parse("2014-12-31+01:00",DateTimeFormatter.ISO_DATE));
+        assertEquals(bean.localDate2, LocalDate.parse("2014-12-31"));
+        assertEquals(bean.localDateTime, LocalDateTime.parse("2007-12-03T10:15:30"));
+        assertEquals(bean.localTime, LocalTime.parse("10:15:30"));
+        assertEquals(bean.offsetDateTime, OffsetDateTime.parse("2007-12-03T10:15:30+01:00"));
+        assertEquals(bean.offsetTime, OffsetTime.parse("10:15:30+01:00"));
+        assertEquals(bean.month, Month.FEBRUARY);
+        assertEquals(bean.dayOfWeek, DayOfWeek.WEDNESDAY);
+        assertEquals(bean.year, Year.of(-2014));
+        assertEquals(bean.yearMonth, YearMonth.of(2014, 12));
+        assertEquals(bean.monthDay, MonthDay.of(Month.DECEMBER, 3));
+        assertEquals(bean.zoneOffset, ZoneOffset.ofHoursMinutes(-12, 0));
+        assertEquals(bean.zoneId, ZoneId.of("America/New_York"));
     }
 
     @XmlRootElement
