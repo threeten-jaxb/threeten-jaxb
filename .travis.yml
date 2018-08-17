@@ -4,10 +4,10 @@ sudo: false
 dist: trusty
 
 os:
-- linux
-- osx
+  - linux
+  - osx
 
 jdk:
-- openjdk8
-- openjdk11
-- openjdk-ea
+  - openjdk8
+  - openjdk11
+  - openjdk-ea
