@@ -12,9 +12,4 @@ class ZoneIdXmlAdapterTest extends AbstractToStringAdapterTest<ZoneId, ZoneIdXml
     ZoneId getNotNullValue() {
         return ZoneId.of("America/New_York");
     }
-
-    @Override
-    String getNotValidStringValue() {
-        return "blah-blah";
-    }
 }

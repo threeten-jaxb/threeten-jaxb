@@ -13,9 +13,4 @@ class OffsetDateTimeXmlAdapterTest
     OffsetDateTime getNotNullValue() {
         return OffsetDateTime.parse("2007-12-03T10:15:30+01:00");
     }
-
-    @Override
-    String getNotValidStringValue() {
-        return "blah-blah";
-    }
 }

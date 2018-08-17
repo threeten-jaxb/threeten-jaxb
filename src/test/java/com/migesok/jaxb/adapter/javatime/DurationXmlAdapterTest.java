@@ -11,9 +11,4 @@ class DurationXmlAdapterTest extends AbstractToStringAdapterTest<Duration, Durat
     Duration getNotNullValue() {
         return Duration.parse("P2DT3H4M");
     }
-
-    @Override
-    String getNotValidStringValue() {
-        return "blah-blah";
-    }
 }

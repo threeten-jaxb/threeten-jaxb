@@ -11,9 +11,4 @@ class YearMonthXmlAdapterTest extends AbstractToStringAdapterTest<YearMonth, Yea
     YearMonth getNotNullValue() {
         return YearMonth.of(2014, 12);
     }
-
-    @Override
-    String getNotValidStringValue() {
-        return "blah-blah";
-    }
 }

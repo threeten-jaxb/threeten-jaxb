@@ -22,8 +22,6 @@ abstract class AbstractToStringAdapterTest<T, A extends XmlAdapter<String, T>> {
 
     abstract T getNotNullValue();
 
-    abstract String getNotValidStringValue();
-
     @BeforeEach
     void setUp()
             throws IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
@@ -51,6 +49,6 @@ abstract class AbstractToStringAdapterTest<T, A extends XmlAdapter<String, T>> {
 
     @Test
     void unmarshalNotValidValue() throws Exception {
-        assertThrows(RuntimeException.class, () -> adapter.unmarshal(requireNonNull(getNotValidStringValue())));
+        assertThrows(RuntimeException.class, () -> adapter.unmarshal("blah-blah"));
     }
 }

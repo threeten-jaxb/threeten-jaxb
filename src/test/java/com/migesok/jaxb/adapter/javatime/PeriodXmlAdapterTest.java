@@ -11,9 +11,4 @@ class PeriodXmlAdapterTest extends AbstractToStringAdapterTest<Period, PeriodXml
     Period getNotNullValue() {
         return Period.parse("P1Y2M3W4D");
     }
-
-    @Override
-    String getNotValidStringValue() {
-        return "blah-blah";
-    }
 }

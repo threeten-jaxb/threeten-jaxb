@@ -11,9 +11,4 @@ class OffsetTimeXmlAdapterTest extends AbstractToStringAdapterTest<OffsetTime, O
     OffsetTime getNotNullValue() {
         return OffsetTime.parse("10:15:30+01:00");
     }
-
-    @Override
-    String getNotValidStringValue() {
-        return "blah-blah";
-    }
 }

@@ -11,9 +11,4 @@ class LocalDateXmlAdapterTest extends AbstractToStringAdapterTest<LocalDate, Loc
     LocalDate getNotNullValue() {
         return LocalDate.of(2014, 12, 31);
     }
-
-    @Override
-    String getNotValidStringValue() {
-        return "blah-blah";
-    }
 }

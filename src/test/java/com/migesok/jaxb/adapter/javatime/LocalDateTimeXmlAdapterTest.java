@@ -12,9 +12,4 @@ class LocalDateTimeXmlAdapterTest extends AbstractToStringAdapterTest<LocalDateT
     LocalDateTime getNotNullValue() {
         return LocalDateTime.parse("2007-12-03T10:15:30");
     }
-
-    @Override
-    String getNotValidStringValue() {
-        return "blah-blah";
-    }
 }
