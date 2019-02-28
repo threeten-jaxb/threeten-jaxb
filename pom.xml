@@ -1,18 +1,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.migesok</groupId>
-  <artifactId>jaxb-java-time-adapters</artifactId>
+  <groupId>org.threeten-jaxb</groupId>
+  <artifactId>threeten-jaxb</artifactId>
   <version>1.1.4-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>jaxb-java-time-adapters</name>
-  <url>https://github.com/jaxb-java-time-adapters/jaxb-java-time-adapters</url>
+  <name>threeten-jaxb</name>
+  <url>https://github.com/threeten-jaxb/threeten-jaxb</url>
   <description>JAXB adapters for Java 8 Date and Time API (JSR-310) types</description>
 
   <issueManagement>
     <system>GitHub</system>
-    <url>https://github.com/jaxb-java-time-adapters/jaxb-java-time-adapters/issues</url>
+    <url>https://github.com/threeten-jaxb/threeten-jaxb/issues</url>
   </issueManagement>
   <inceptionYear>2015</inceptionYear>
   <developers>
@@ -33,9 +33,9 @@
     </license>
   </licenses>
   <scm>
-    <connection>scm:git:git@github.com:jaxb-java-time-adapters/jaxb-java-time-adapters.git</connection>
-    <developerConnection>scm:git:git@github.com:jaxb-java-time-adapters/jaxb-java-time-adapters.git</developerConnection>
-    <url>https://github.com/jaxb-java-time-adapters/jaxb-java-time-adapters</url>
+    <connection>scm:git:git@github.com:threeten-jaxb/threeten-jaxb.git</connection>
+    <developerConnection>scm:git:git@github.com:threeten-jaxb/threeten-jaxb.git</developerConnection>
+    <url>https://github.com/threeten-jaxb/threeten-jaxb</url>
     <tag>HEAD</tag>
   </scm>
   <distributionManagement>
