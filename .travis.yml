@@ -3,9 +3,7 @@ language: java
 sudo: false
 dist: trusty
 
-os:
-  - linux
-  - osx
+os: linux
 
 jdk:
   - openjdk8
