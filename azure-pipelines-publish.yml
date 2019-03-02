@@ -1,0 +1,28 @@
+trigger: none
+
+pool:
+  vmImage: 'Ubuntu-16.04'
+
+steps:
+- task: DownloadSecureFile@1
+  inputs:
+    secureFile: 'secring.gpg'
+
+- task: DownloadSecureFile@1
+  inputs:
+    secureFile: 'gradle.properties'
+
+- task: Gradle@2
+  inputs:
+    workingDirectory: ''
+    options: "-Psigning.secretKeyRingFile=$(Agent.TempDirectory)/secring.gpg"
+    gradleWrapperFile: 'gradlew'
+    gradleOptions: '-Xmx3072m'
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.11'
+    jdkArchitectureOption: 'x64'
+    publishJUnitResults: false
+    testResultsFiles: '**/TEST-*.xml'
+    tasks: 'publish'
+  env:
+    GRADLE_USER_HOME: $(Agent.TempDirectory)
