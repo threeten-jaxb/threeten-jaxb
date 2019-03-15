@@ -1,6 +1,5 @@
 package io.github.threetenjaxb.core;
 
-import javax.annotation.Nonnull;
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAccessor;
@@ -35,8 +34,8 @@ public class TemporalAccessorXmlAdapter<T extends TemporalAccessor> extends XmlA
      * @param formatter     the formatter for printing and parsing, not null
      * @param temporalQuery the query defining the type to parse to, not null
      */
-    public TemporalAccessorXmlAdapter(@Nonnull DateTimeFormatter formatter,
-                                      @Nonnull TemporalQuery<? extends T> temporalQuery) {
+    public TemporalAccessorXmlAdapter(DateTimeFormatter formatter,
+                                      TemporalQuery<? extends T> temporalQuery) {
         this.formatter = requireNonNull(formatter, "formatter must not be null");
         this.temporalQuery = requireNonNull(temporalQuery, "temporal query must not be null");
     }

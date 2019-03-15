@@ -1,7 +1,6 @@
 package io.github.threetenjaxb.core;
 
 import java.lang.reflect.InvocationTargetException;
-import javax.annotation.Nonnull;
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -16,7 +15,7 @@ public abstract class AbstractToStringAdapterTest<T, A extends XmlAdapter<String
     private final Class<A> adapterClass;
     protected A adapter;
 
-    protected AbstractToStringAdapterTest(@Nonnull Class<A> adapterClass) {
+    protected AbstractToStringAdapterTest(Class<A> adapterClass) {
         this.adapterClass = requireNonNull(adapterClass);
     }
 
