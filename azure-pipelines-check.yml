@@ -6,6 +6,20 @@ pool:
 
 steps:
 - task: Gradle@2
+  displayName: 'Java 11 Compatibility'
+  inputs:
+    workingDirectory: ''
+    options: "-PjavaCompatibility=11"
+    gradleWrapperFile: 'gradlew'
+    gradleOptions: '-Xmx3072m'
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.11'
+    jdkArchitectureOption: 'x64'
+    publishJUnitResults: false
+    testResultsFiles: '**/TEST-*.xml'
+    tasks: 'check'
+- task: Gradle@2
+  displayName: 'Java 8 Compatibility'
   inputs:
     workingDirectory: ''
     gradleWrapperFile: 'gradlew'

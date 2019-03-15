@@ -1,7 +1,12 @@
 description = "Root project of the threeten-jaxb JAXB adapters for the ThreeTen date and time API for Java"
 
+plugins {
+    id("org.beryx.jar") version "1.1.3" apply false
+}
+
 subprojects {
     apply(plugin = "java-library")
+    apply(plugin = "org.beryx.jar")
     apply(plugin = "maven-publish")
     apply(plugin = "signing")
     
