@@ -1,3 +1,5 @@
+description = "Root project of the threeten-jaxb JAXB adapters for the ThreeTen date and time API for Java"
+
 subprojects {
     apply(plugin = "java-library")
     apply(plugin = "maven-publish")
