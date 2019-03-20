@@ -11,7 +11,7 @@ subprojects {
     apply(plugin = "signing")
 
     group = "io.github.threeten-jaxb"
-    version = "1.1.4-SNAPSHOT"
+    version = "1.2"
 
     repositories {
         mavenCentral()
