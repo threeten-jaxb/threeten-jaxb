@@ -2,6 +2,9 @@
 
 set -o errexit
 
+git config --global user.name "Martin Kröning (CI)"
+git config --global user.email "m.kroening@hotmail.de"
+
 pushd ..
 
 git clone https://github.com/threeten-jaxb/threeten-jaxb.github.io.git <<END
