@@ -3,6 +3,9 @@ trigger: none
 pool:
   vmImage: 'Ubuntu-16.04'
 
+variables:
+  - group: github-access-variable-group
+
 steps:
   - task: Gradle@2
     inputs:
