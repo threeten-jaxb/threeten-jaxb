@@ -7,7 +7,7 @@ git config --global user.email "m.kroening@hotmail.de"
 
 pushd ..
 
-git clone https://$GITHUB_USERNAME:$GITHUB_TOKEN@github.com/threeten-jaxb/threeten-jaxb.github.io.git
+git clone https://$GITHUB_TOKEN@github.com/threeten-jaxb/threeten-jaxb.github.io.git
 
 popd
 
