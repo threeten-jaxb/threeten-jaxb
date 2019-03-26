@@ -46,6 +46,13 @@ subprojects {
         useJUnitPlatform()
     }
 
+    tasks.withType<Javadoc> {
+        options {
+            this as StandardJavadocDocletOptions
+            links("https://docs.oracle.com/en/java/javase/12/docs/api/")
+        }
+    }
+
     dependencies {
         "testImplementation"(platform("org.junit:junit-bom:5.4.0"))
         "testImplementation"("org.junit.jupiter:junit-jupiter-api")
