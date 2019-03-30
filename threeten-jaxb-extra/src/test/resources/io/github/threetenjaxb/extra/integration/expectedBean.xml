@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bean>
+    <dayOfMonth>21</dayOfMonth>
+    <dayOfYear>51</dayOfYear>
+    <days>P12D</days>
+    <hours>PT4H</hours>
+    <interval>2007-12-03T10:15:30Z/2007-12-04T10:15:30Z</interval>
+    <localDateRange>2007-12-03/2007-12-04</localDateRange>
+    <minutes>PT8M</minutes>
+    <months>P12M</months>
+    <periodDuration>P1Y2M25DT8H</periodDuration>
+    <seconds>PT8S</seconds>
+    <weeks>P12W</weeks>
+    <yearQuarter>2017-Q2</yearQuarter>
+    <years>P12Y</years>
+    <yearWeek>2015-W13</yearWeek>
+</bean>

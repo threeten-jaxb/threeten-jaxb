@@ -54,6 +54,11 @@ subprojects {
     }
 
     dependencies {
+        "api"(platform("org.glassfish.jaxb:jaxb-bom:2.3.2"))
+        "api"("jakarta.xml.bind:jakarta.xml.bind-api")
+
+        "testRuntimeOnly"("org.glassfish.jaxb:jaxb-runtime")
+
         "testImplementation"(platform("org.junit:junit-bom:5.4.0"))
         "testImplementation"("org.junit.jupiter:junit-jupiter-api")
         "testRuntimeOnly"("org.junit.jupiter:junit-jupiter-engine")
