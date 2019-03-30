@@ -1,21 +1,22 @@
 package io.github.threetenjaxb.core;
 
 import java.time.OffsetDateTime;
+import java.time.ZoneOffset;
+import java.util.HashMap;
+import java.util.Map;
 
-public class OffsetDateTimeXmlAdapterTest
-        extends AbstractToStringAdapterTest<OffsetDateTime, OffsetDateTimeXmlAdapter> {
+class OffsetDateTimeXmlAdapterTest extends AbstractXmlAdapterTest<String, OffsetDateTime, OffsetDateTimeXmlAdapter> {
 
-    public OffsetDateTimeXmlAdapterTest() {
-        super(OffsetDateTimeXmlAdapter.class);
+    private static final Map<String, OffsetDateTime> STRING_OFFSET_DATE_TIME_MAP = new HashMap<>();
+
+    static {
+        STRING_OFFSET_DATE_TIME_MAP.put("2007-12-03T10:15:30+01:00",
+                OffsetDateTime.of(2007, 12, 3, 10, 15, 30, 0,
+                        ZoneOffset.ofHours(1))
+        );
     }
 
-    @Override
-    protected OffsetDateTime getNotNullValue() {
-        return OffsetDateTime.parse("2007-12-03T10:15:30+01:00");
-    }
-
-    @Override
-    protected String getNotValidStringValue() {
-        return "blah-blah";
+    OffsetDateTimeXmlAdapterTest() {
+        super(new OffsetDateTimeXmlAdapter(), STRING_OFFSET_DATE_TIME_MAP);
     }
 }

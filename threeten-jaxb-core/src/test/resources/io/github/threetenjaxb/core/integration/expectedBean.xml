@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bean>
+    <duration>PT51H4M</duration>
+    <instant>2007-12-03T10:15:30Z</instant>
+    <localDateTime>2007-12-03T10:15:30</localDateTime>
+    <localDate>2014-12-31</localDate>
+    <localTime>10:15:30</localTime>
+    <monthDay>--12-03</monthDay>
+    <offsetDateTime>2007-12-03T10:15:30+01:00</offsetDateTime>
+    <offsetTime>10:15:30+01:00</offsetTime>
+    <period>P1Y2M25D</period>
+    <year>-2014</year>
+    <yearMonth>2014-12</yearMonth>
+    <zoneId>America/New_York</zoneId>
+    <zoneOffset>-12:00</zoneOffset>
+    <zonedDateTime>2007-12-03T10:15:30+01:00[Europe/Paris]</zonedDateTime>
+</bean>

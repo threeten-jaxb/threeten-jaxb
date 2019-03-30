@@ -1,19 +1,18 @@
 package io.github.threetenjaxb.core;
 
 import java.time.LocalTime;
+import java.util.HashMap;
+import java.util.Map;
 
-public class LocalTimeXmlAdapterTest extends AbstractToStringAdapterTest<LocalTime, LocalTimeXmlAdapter> {
-    public LocalTimeXmlAdapterTest() {
-        super(LocalTimeXmlAdapter.class);
+class LocalTimeXmlAdapterTest extends AbstractXmlAdapterTest<String, LocalTime, LocalTimeXmlAdapter> {
+
+    private static final Map<String, LocalTime> STRING_LOCAL_TIME_MAP = new HashMap<>();
+
+    static {
+        STRING_LOCAL_TIME_MAP.put("10:15:30", LocalTime.of(10, 15, 30));
     }
 
-    @Override
-    protected LocalTime getNotNullValue() {
-        return LocalTime.parse("10:15:30");
-    }
-
-    @Override
-    protected String getNotValidStringValue() {
-        return "blah-blah";
+    LocalTimeXmlAdapterTest() {
+        super(new LocalTimeXmlAdapter(), STRING_LOCAL_TIME_MAP);
     }
 }

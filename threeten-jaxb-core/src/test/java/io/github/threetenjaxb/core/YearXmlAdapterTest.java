@@ -1,43 +1,18 @@
 package io.github.threetenjaxb.core;
 
-import java.time.DateTimeException;
 import java.time.Year;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import java.util.HashMap;
+import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+class YearXmlAdapterTest extends AbstractXmlAdapterTest<Integer, Year, YearXmlAdapter> {
 
-public class YearXmlAdapterTest {
-    private YearXmlAdapter adapter;
+    private static final Map<Integer, Year> INTEGER_YEAR_MAP = new HashMap<>();
 
-    @BeforeEach
-    public void setUp() {
-        adapter = new YearXmlAdapter();
+    static {
+        INTEGER_YEAR_MAP.put(2007, Year.of(2007));
     }
 
-    @Test
-    public void marshallNull() throws Exception {
-        assertNull(adapter.marshal(null));
-    }
-
-    @Test
-    public void unmarshalNull() throws Exception {
-        assertNull(adapter.unmarshal(null));
-    }
-
-    @Test
-    public void marshallNotNullValue() throws Exception {
-        Year value = Year.of(-2014);
-        Integer marshaledValue = adapter.marshal(value);
-        Year unmarshalledValue = adapter.unmarshal(marshaledValue);
-
-        assertEquals(unmarshalledValue, value);
-    }
-
-    @Test
-    public void unmarshalNotValidValue() throws Exception {
-        assertThrows(DateTimeException.class, () -> adapter.unmarshal(Integer.MIN_VALUE));
+    YearXmlAdapterTest() {
+        super(new YearXmlAdapter(), INTEGER_YEAR_MAP);
     }
 }
