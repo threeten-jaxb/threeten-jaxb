@@ -1,7 +1,7 @@
 package io.github.threetenjaxb.core;
 
 import java.time.YearMonth;
-import javax.xml.bind.annotation.adapters.XmlAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 
 /**
  * {@code XmlAdapter} mapping JSR-310 {@code YearMonth} to a string such as 2007-12
@@ -12,7 +12,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
  * <li>{@link java.time.YearMonth#toString()}</li>
  * </ul>
  *
- * @see javax.xml.bind.annotation.adapters.XmlAdapter
+ * @see jakarta.xml.bind.annotation.adapters.XmlAdapter
  * @see java.time.YearMonth
  */
 public class YearMonthXmlAdapter extends XmlAdapter<String, YearMonth> {

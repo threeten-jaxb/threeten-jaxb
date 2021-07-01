@@ -9,7 +9,7 @@ import java.time.format.DateTimeFormatter;
  * It uses {@link java.time.format.DateTimeFormatter#ISO_DATE} for parsing and serializing,
  * time-zone information ignored.
  *
- * @see javax.xml.bind.annotation.adapters.XmlAdapter
+ * @see jakarta.xml.bind.annotation.adapters.XmlAdapter
  * @see java.time.LocalDate
  */
 public class LocalDateXmlAdapter extends TemporalAccessorXmlAdapter<LocalDate> {

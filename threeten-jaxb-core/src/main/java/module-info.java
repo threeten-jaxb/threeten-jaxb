@@ -1,5 +1,5 @@
 module io.github.threetenjaxb.core {
-  requires java.xml.bind;
+  requires jakarta.xml.bind;
 
   exports io.github.threetenjaxb.core;
 }

@@ -1,7 +1,7 @@
 /**
  * XmlAdapters for the {@link java.time} API.
  *
- * <p>These classes implement {@link javax.xml.bind.annotation.adapters.XmlAdapter} and can be used with the {@link javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter} annotation.
+ * <p>These classes implement {@link jakarta.xml.bind.annotation.adapters.XmlAdapter} and can be used with the {@link jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter} annotation.
  *
  * <p><b>XJC Bindings Example</b>
  * <pre>{@code    <bindings xmlns="http://java.sun.com/xml/ns/jaxb" version="2.1"

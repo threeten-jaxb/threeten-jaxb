@@ -2,7 +2,7 @@ package io.github.threetenjaxb.core;
 
 import org.junit.jupiter.api.Test;
 
-import javax.xml.bind.annotation.adapters.XmlAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 import java.util.Map;
 import java.util.Objects;
 

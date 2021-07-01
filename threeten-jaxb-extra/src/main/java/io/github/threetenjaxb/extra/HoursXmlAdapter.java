@@ -2,7 +2,7 @@ package io.github.threetenjaxb.extra;
 
 import org.threeten.extra.Hours;
 
-import javax.xml.bind.annotation.adapters.XmlAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 
 /**
  * {@link XmlAdapter} for {@link Hours}.

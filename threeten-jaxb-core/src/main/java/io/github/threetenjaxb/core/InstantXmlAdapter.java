@@ -8,7 +8,7 @@ import java.time.format.DateTimeFormatter;
  * <p>
  * String format details: {@link java.time.format.DateTimeFormatter#ISO_INSTANT}
  *
- * @see javax.xml.bind.annotation.adapters.XmlAdapter
+ * @see jakarta.xml.bind.annotation.adapters.XmlAdapter
  * @see java.time.Instant
  */
 public class InstantXmlAdapter extends TemporalAccessorXmlAdapter<Instant> {

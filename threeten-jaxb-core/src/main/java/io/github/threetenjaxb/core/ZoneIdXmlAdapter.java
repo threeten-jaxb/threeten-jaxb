@@ -1,7 +1,7 @@
 package io.github.threetenjaxb.core;
 
 import java.time.ZoneId;
-import javax.xml.bind.annotation.adapters.XmlAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 
 /**
  * {@code XmlAdapter} mapping JSR-310 {@code ZoneId} and {@code ZoneOffset} to the time-zone ID string
@@ -12,7 +12,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
  * <li>{@link java.time.ZoneId#getId()}</li>
  * </ul>
  *
- * @see javax.xml.bind.annotation.adapters.XmlAdapter
+ * @see jakarta.xml.bind.annotation.adapters.XmlAdapter
  * @see java.time.ZoneId
  * @see java.time.ZoneOffset
  */

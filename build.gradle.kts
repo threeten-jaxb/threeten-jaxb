@@ -1,12 +1,7 @@
 description = "Root project of the threeten-jaxb JAXB adapters for the ThreeTen date and time API for Java"
 
-plugins {
-    id("org.beryx.jar") version "1.1.3" apply false
-}
-
 subprojects {
     apply(plugin = "java-library")
-    apply(plugin = "org.beryx.jar")
     apply(plugin = "maven-publish")
     apply(plugin = "signing")
 
@@ -18,8 +13,8 @@ subprojects {
     }
 
     configure<JavaPluginConvention> {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_1_9
+        targetCompatibility = JavaVersion.VERSION_1_9
     }
 
     task<Jar>("sourcesJar") {
@@ -49,15 +44,14 @@ subprojects {
     tasks.withType<Javadoc> {
         options {
             this as StandardJavadocDocletOptions
-            links("https://docs.oracle.com/en/java/javase/12/docs/api/")
+            links("https://javadoc.io/doc/jakarta.xml.bind/jakarta.xml.bind-api/3.0.1/")
         }
     }
 
     dependencies {
-        "api"(platform("org.glassfish.jaxb:jaxb-bom:2.3.2"))
-        "api"("jakarta.xml.bind:jakarta.xml.bind-api")
+        "api"("jakarta.xml.bind:jakarta.xml.bind-api:3.0.1")
 
-        "testRuntimeOnly"("org.glassfish.jaxb:jaxb-runtime")
+        "testRuntimeOnly"("com.sun.xml.bind:jaxb-impl:3.0.1")
 
         "testImplementation"(platform("org.junit:junit-bom:5.4.0"))
         "testImplementation"("org.junit.jupiter:junit-jupiter-api")

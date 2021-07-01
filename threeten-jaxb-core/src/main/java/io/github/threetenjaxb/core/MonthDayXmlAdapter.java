@@ -1,7 +1,7 @@
 package io.github.threetenjaxb.core;
 
 import java.time.MonthDay;
-import javax.xml.bind.annotation.adapters.XmlAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 
 /**
  * {@code XmlAdapter} mapping JSR-310 {@code MonthDay} to a string such as --12-03
@@ -12,7 +12,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
  * <li>{@link java.time.MonthDay#toString()}</li>
  * </ul>
  *
- * @see javax.xml.bind.annotation.adapters.XmlAdapter
+ * @see jakarta.xml.bind.annotation.adapters.XmlAdapter
  * @see java.time.MonthDay
  */
 public class MonthDayXmlAdapter extends XmlAdapter<String, MonthDay> {

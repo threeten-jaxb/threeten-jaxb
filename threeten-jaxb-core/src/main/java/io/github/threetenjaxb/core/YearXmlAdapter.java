@@ -1,7 +1,7 @@
 package io.github.threetenjaxb.core;
 
 import java.time.Year;
-import javax.xml.bind.annotation.adapters.XmlAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 
 /**
  * {@code XmlAdapter} mapping JSR-310 {@code Year} to ISO proleptic year number
@@ -12,7 +12,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
  * <li>{@link java.time.Year#getValue()}</li>
  * </ul>
  *
- * @see javax.xml.bind.annotation.adapters.XmlAdapter
+ * @see jakarta.xml.bind.annotation.adapters.XmlAdapter
  * @see java.time.Year
  */
 public class YearXmlAdapter extends XmlAdapter<Integer, Year> {

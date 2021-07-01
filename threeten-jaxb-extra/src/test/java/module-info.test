@@ -1,3 +1,3 @@
 // The bean class must be open for testing its marshalling and unmarshalling
 --add-opens
-  io.github.threetenjaxb.extra/io.github.threetenjaxb.extra.integration=java.xml.bind
+  io.github.threetenjaxb.extra/io.github.threetenjaxb.extra.integration=jakarta.xml.bind

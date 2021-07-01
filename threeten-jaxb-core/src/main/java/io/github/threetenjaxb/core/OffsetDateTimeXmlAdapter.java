@@ -8,7 +8,7 @@ import java.time.format.DateTimeFormatter;
  * <p>
  * String format details: {@link java.time.format.DateTimeFormatter#ISO_OFFSET_DATE_TIME}
  *
- * @see javax.xml.bind.annotation.adapters.XmlAdapter
+ * @see jakarta.xml.bind.annotation.adapters.XmlAdapter
  * @see java.time.OffsetDateTime
  */
 public class OffsetDateTimeXmlAdapter extends TemporalAccessorXmlAdapter<OffsetDateTime> {

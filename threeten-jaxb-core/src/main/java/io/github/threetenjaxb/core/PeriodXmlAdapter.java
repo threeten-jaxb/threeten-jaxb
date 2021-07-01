@@ -1,7 +1,7 @@
 package io.github.threetenjaxb.core;
 
 import java.time.Period;
-import javax.xml.bind.annotation.adapters.XmlAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 
 /**
  * {@code XmlAdapter} mapping JSR-310 {@code Period} to ISO-8601 string
@@ -12,7 +12,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
  * <li>{@link java.time.Period#toString()}</li>
  * </ul>
  *
- * @see javax.xml.bind.annotation.adapters.XmlAdapter
+ * @see jakarta.xml.bind.annotation.adapters.XmlAdapter
  * @see java.time.Period
  */
 public class PeriodXmlAdapter extends XmlAdapter<String, Period> {
