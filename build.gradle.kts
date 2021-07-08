@@ -80,9 +80,9 @@ subprojects {
 
                         developers {
                             developer {
-                                id.set("mwkroening")
+                                id.set("mkroening")
                                 name.set("Martin Kröning")
-                                url.set("https://github.com/mwkroening")
+                                url.set("https://github.com/mkroening")
                             }
                             developer {
                                 id.set("migesok")
