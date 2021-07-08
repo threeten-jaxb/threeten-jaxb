@@ -53,7 +53,7 @@ subprojects {
 
         "testRuntimeOnly"("com.sun.xml.bind:jaxb-impl:3.0.1")
 
-        "testImplementation"(platform("org.junit:junit-bom:5.4.0"))
+        "testImplementation"(platform("org.junit:junit-bom:5.7.2"))
         "testImplementation"("org.junit.jupiter:junit-jupiter-api")
         "testRuntimeOnly"("org.junit.jupiter:junit-jupiter-engine")
     }
