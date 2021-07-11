@@ -1,6 +1,5 @@
 # threeten-jaxb: XmlAdapters for [ThreeTen](https://www.threeten.org/)
 
-[![Build Status](https://dev.azure.com/threeten-jaxb/threeten-jaxb/_apis/build/status/Check?branchName=master)](https://dev.azure.com/threeten-jaxb/threeten-jaxb/_build/latest?definitionId=3&branchName=master)
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.threeten-jaxb/threeten-jaxb-core.svg)](https://search.maven.org/search?q=g:io.github.threeten-jaxb)
 [![GitHub](https://img.shields.io/github/license/threeten-jaxb/threeten-jaxb.svg)](https://opensource.org/licenses/Apache-2.0)
 
