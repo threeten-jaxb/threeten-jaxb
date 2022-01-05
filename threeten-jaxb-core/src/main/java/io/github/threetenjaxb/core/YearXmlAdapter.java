@@ -11,6 +11,9 @@ import jakarta.xml.bind.annotation.adapters.XmlAdapter;
  * <li>{@link java.time.Year#of(int)}</li>
  * <li>{@link java.time.Year#getValue()}</li>
  * </ul>
+ * <p>
+ * Be aware that using this adapter will yield {@code null} when unmarshalling
+ * {@code xsd:gYear} types. Use {@link YearAsTextXmlAdapter} instead.
  *
  * @see jakarta.xml.bind.annotation.adapters.XmlAdapter
  * @see java.time.Year

@@ -9,6 +9,9 @@ import jakarta.xml.bind.annotation.adapters.XmlAdapter;
  *
  * <p>This {@link XmlAdapter} binds {@link DayOfMonth} to its day-of-month
  * value.
+ * <p>
+ * Be aware that using this adapter will yield {@code null} when unmarshalling
+ * {@code xsd:gDay} types. Use {@link DayOfMonthAsTextXmlAdapter} instead.
  */
 public class DayOfMonthXmlAdapter extends XmlAdapter<Integer, DayOfMonth> {
     @Override
