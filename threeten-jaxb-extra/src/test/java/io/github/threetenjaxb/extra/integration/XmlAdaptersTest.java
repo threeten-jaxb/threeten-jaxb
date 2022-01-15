@@ -1,5 +1,6 @@
 package io.github.threetenjaxb.extra.integration;
 
+import io.github.threetenjaxb.extra.DayOfMonthAsTextXmlAdapter;
 import io.github.threetenjaxb.extra.DayOfMonthXmlAdapter;
 import io.github.threetenjaxb.extra.DayOfYearXmlAdapter;
 import io.github.threetenjaxb.extra.DaysXmlAdapter;
@@ -14,6 +15,8 @@ import io.github.threetenjaxb.extra.WeeksXmlAdapter;
 import io.github.threetenjaxb.extra.YearQuarterXmlAdapter;
 import io.github.threetenjaxb.extra.YearWeekXmlAdapter;
 import io.github.threetenjaxb.extra.YearsXmlAdapter;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
 import org.junit.jupiter.api.Test;
 import org.threeten.extra.DayOfMonth;
 import org.threeten.extra.DayOfYear;
@@ -63,6 +66,7 @@ class XmlAdaptersTest {
 
         final Bean expectedBean = new Bean();
         expectedBean.dayOfMonth = DayOfMonth.of(21);
+        expectedBean.dayOfMonthTextified = DayOfMonth.of(21);
         expectedBean.dayOfYear = DayOfYear.of(51);
         expectedBean.days = Days.of(12);
         expectedBean.hours = Hours.of(4);
@@ -106,6 +110,7 @@ class XmlAdaptersTest {
         final Bean unmarshalled = (Bean) unmarshaller.unmarshal(expectedMarshalledBean);
         assertAll("bean",
                 () -> assertEquals(expectedBean.dayOfMonth, unmarshalled.dayOfMonth),
+                () -> assertEquals(expectedBean.dayOfMonthTextified, unmarshalled.dayOfMonthTextified),
                 () -> assertEquals(expectedBean.dayOfYear, unmarshalled.dayOfYear),
                 () -> assertEquals(expectedBean.days, unmarshalled.days),
                 () -> assertEquals(expectedBean.hours, unmarshalled.hours),
@@ -126,6 +131,11 @@ class XmlAdaptersTest {
     static class Bean {
         @XmlJavaTypeAdapter(DayOfMonthXmlAdapter.class)
         DayOfMonth dayOfMonth;
+
+        @XmlJavaTypeAdapter(DayOfMonthAsTextXmlAdapter.class)
+        @XmlSchemaType(name = "gDay")
+        @XmlElement(type = String.class)
+        DayOfMonth dayOfMonthTextified;
 
         @XmlJavaTypeAdapter(DayOfYearXmlAdapter.class)
         DayOfYear dayOfYear;

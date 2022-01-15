@@ -11,6 +11,8 @@ import jakarta.xml.bind.annotation.adapters.XmlAdapter;
  * <li>{@link java.time.MonthDay#parse(java.lang.CharSequence)}</li>
  * <li>{@link java.time.MonthDay#toString()}</li>
  * </ul>
+ * <p>
+ * This adapter is suitable for {@code xsd:gMonthDay} types.
  *
  * @see jakarta.xml.bind.annotation.adapters.XmlAdapter
  * @see java.time.MonthDay

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <bean>
     <dayOfMonth>21</dayOfMonth>
+    <dayOfMonthTextified>21</dayOfMonthTextified>
     <dayOfYear>51</dayOfYear>
     <days>P12D</days>
     <hours>PT4H</hours>

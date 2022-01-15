@@ -11,6 +11,8 @@ import java.time.Duration;
  * <li>{@link java.time.Duration#parse(java.lang.CharSequence)}</li>
  * <li>{@link java.time.Duration#toString()}</li>
  * </ul>
+ * <p>
+ * This adapter is suitable for {@code xsd:duration} types.
  *
  * @see jakarta.xml.bind.annotation.adapters.XmlAdapter
  * @see java.time.Duration

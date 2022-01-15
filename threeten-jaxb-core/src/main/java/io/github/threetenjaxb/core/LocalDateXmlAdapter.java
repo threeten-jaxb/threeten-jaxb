@@ -8,6 +8,8 @@ import java.time.format.DateTimeFormatter;
  * <p>
  * It uses {@link java.time.format.DateTimeFormatter#ISO_DATE} for parsing and serializing,
  * time-zone information ignored.
+ * <p>
+ * This adapter is suitable for {@code xsd:date} types.
  *
  * @see jakarta.xml.bind.annotation.adapters.XmlAdapter
  * @see java.time.LocalDate
