@@ -51,9 +51,9 @@ subprojects {
     dependencies {
         "api"("jakarta.xml.bind:jakarta.xml.bind-api:3.0.1")
 
-        "testRuntimeOnly"("com.sun.xml.bind:jaxb-impl:3.0.1")
+        "testRuntimeOnly"("com.sun.xml.bind:jaxb-impl:3.0.2")
 
-        "testImplementation"(platform("org.junit:junit-bom:5.7.2"))
+        "testImplementation"(platform("org.junit:junit-bom:5.8.2"))
         "testImplementation"("org.junit.jupiter:junit-jupiter-api")
         "testRuntimeOnly"("org.junit.jupiter:junit-jupiter-engine")
     }
