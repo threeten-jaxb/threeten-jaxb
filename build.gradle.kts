@@ -3,10 +3,10 @@ description = "Root project of the threeten-jaxb JAXB adapters for the ThreeTen 
 subprojects {
     apply(plugin = "java-library")
     apply(plugin = "maven-publish")
-    apply(plugin = "signing")
+    //apply(plugin = "signing")
 
     group = "io.github.threeten-jaxb"
-    version = "2.1.0-pai.0"
+    version = "2.1.0-pai.1"
 
     repositories {
         mavenCentral()
@@ -116,8 +116,9 @@ subprojects {
             }
         }
 
-        configure<SigningExtension> {
+/*        configure<SigningExtension> {
             sign(the<PublishingExtension>().publications["mavenJava"])
         }
+ */
     }
 }

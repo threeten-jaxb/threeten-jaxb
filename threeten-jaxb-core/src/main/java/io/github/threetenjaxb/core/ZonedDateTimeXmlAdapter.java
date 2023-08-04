@@ -48,10 +48,11 @@ public class ZonedDateTimeXmlAdapter extends XmlAdapter<String, ZonedDateTime> {
             return null;
 
         if (stringValue.contains("T")) { // stringValue contains a Time component
+            String[] parts = stringValue.split("T");
             // stringValue contains zone
             if ((stringValue.contains("Z")) || ((stringValue.contains("[") && (stringValue.contains("]"))))) {
                 return fZonedDateTime.parse(stringValue, tqZonedDateTime);
-            } else if ((stringValue.contains("+")) || (stringValue.contains("-"))) { // stingValue contains only offset
+            } else if ((parts[1].contains("+")) || (parts[1].contains("-"))) { // stingValue contains only offset
                 return fOffsetDateTime.parse(stringValue, tqOffsetDateTime).atZoneSameInstant(zuluZone);
             } else {
                 return fLocalDateTime.parse(stringValue, tqLocalDateTime).atZone(zuluZone);
