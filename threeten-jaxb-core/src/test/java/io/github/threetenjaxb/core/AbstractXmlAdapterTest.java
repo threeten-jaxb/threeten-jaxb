@@ -11,8 +11,8 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 
 abstract class AbstractXmlAdapterTest<ValueType, BoundType, XmlAdapterType extends XmlAdapter<ValueType, BoundType>> {
 
-    private final XmlAdapterType xmlAdapterType;
-    private final Map<ValueType, BoundType> valueBoundMap;
+    final XmlAdapterType xmlAdapterType;
+    final Map<ValueType, BoundType> valueBoundMap;
 
     AbstractXmlAdapterTest(final XmlAdapterType xmlAdapterType, final Map<ValueType, BoundType> valueBoundMap) {
         this.xmlAdapterType = Objects.requireNonNull(xmlAdapterType, "xmlAdapterType must not be null");
