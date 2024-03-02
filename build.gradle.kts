@@ -52,7 +52,7 @@ subprojects {
     dependencies {
         "api"("jakarta.xml.bind:jakarta.xml.bind-api:4.0.1")
 
-        "testRuntimeOnly"("com.sun.xml.bind:jaxb-impl:3.0.2")
+        "testRuntimeOnly"("org.glassfish.jaxb:jaxb-runtime:4.0.4")
 
         "testImplementation"("org.junit.jupiter:junit-jupiter:5.8.2")
         "testRuntimeOnly"("org.junit.platform:junit-platform-launcher")
