@@ -13,6 +13,12 @@ class OffsetTimeXmlAdapterTest extends AbstractXmlAdapterTest<String, OffsetTime
         STRING_OFFSET_TIME_MAP.put("10:15:30+01:00", OffsetTime
                 .of(10, 15, 30, 0, ZoneOffset.ofHours(1))
         );
+        STRING_OFFSET_TIME_MAP.put("10:15:30Z", OffsetTime
+                .of(10, 15, 30, 0, ZoneOffset.UTC)
+        );
+        STRING_OFFSET_TIME_MAP.put("10:15:30.00000005+01:00", OffsetTime
+                .of(10, 15, 30, 50, ZoneOffset.ofHours(1))
+        );
     }
 
     OffsetTimeXmlAdapterTest() {
