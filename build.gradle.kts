@@ -45,12 +45,12 @@ subprojects {
     tasks.withType<Javadoc> {
         options {
             this as StandardJavadocDocletOptions
-            links("https://javadoc.io/doc/jakarta.xml.bind/jakarta.xml.bind-api/3.0.1/")
+            links("https://javadoc.io/doc/jakarta.xml.bind/jakarta.xml.bind-api/4.0.1/")
         }
     }
 
     dependencies {
-        "api"("jakarta.xml.bind:jakarta.xml.bind-api:3.0.1")
+        "api"("jakarta.xml.bind:jakarta.xml.bind-api:4.0.1")
 
         "testRuntimeOnly"("com.sun.xml.bind:jaxb-impl:3.0.2")
 
