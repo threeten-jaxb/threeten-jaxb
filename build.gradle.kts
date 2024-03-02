@@ -54,7 +54,7 @@ subprojects {
 
         "testRuntimeOnly"("org.glassfish.jaxb:jaxb-runtime:4.0.4")
 
-        "testImplementation"("org.junit.jupiter:junit-jupiter:5.8.2")
+        "testImplementation"("org.junit.jupiter:junit-jupiter:5.10.2")
         "testRuntimeOnly"("org.junit.platform:junit-platform-launcher")
     }
 
