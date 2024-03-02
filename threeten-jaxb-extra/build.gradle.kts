@@ -8,5 +8,5 @@ tasks.withType<Javadoc> {
 }
 
 dependencies {
-    api("org.threeten:threeten-extra:1.5.0")
+    api("org.threeten:threeten-extra:1.7.2")
 }
