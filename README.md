@@ -18,3 +18,26 @@ standard formats wherever applicable.
 
 Version 2 of this library conforms to the new [Jakarta XML Binding](https://jakarta.ee/specifications/xml-binding/4.0/).
 If you are still using the old “javax” JAXB, please refer to [release 1.2](https://github.com/threeten-jaxb/threeten-jaxb/tree/v1.2).
+
+Usage
+--
+To use this library, define a `bindings.xml` file with the desired mapping, for example:
+
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jaxb:bindings version="3.0"
+               xmlns:jaxb="https://jakarta.ee/xml/ns/jaxb"
+               xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+               xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <jaxb:globalBindings>
+        <xjc:javaType name="java.time.LocalDate"
+                      xmlType="xs:date"
+                      adapter="io.github.threetenjaxb.core.LocalDateXmlAdapter"/>
+    </jaxb:globalBindings>
+</jaxb:bindings>
+```
+
+Then use this binding file with your code generation tool, e.g.
+[Jakarta’s wsimport](https://eclipse-ee4j.github.io/metro-jax-ws/4.0.0/docs/ch04.html#tools-wsimport)
+or [CXF’s wsdl2java](https://cxf.apache.org/docs/wsdl-to-java.html).
