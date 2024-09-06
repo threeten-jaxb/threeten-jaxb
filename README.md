@@ -5,12 +5,13 @@
 [![javadoc](https://javadoc.io/badge2/io.github.threeten-jaxb/threeten-jaxb-core/javadoc.svg)](https://javadoc.io/doc/io.github.threeten-jaxb)
 [![GitHub](https://img.shields.io/github/license/threeten-jaxb/threeten-jaxb.svg)](https://opensource.org/licenses/Apache-2.0)
 
-New Date and Time API introduced in Java 8 (aka JSR-310) is a big step forward
-comparing to what were available before in the JVM standard library. Sad thing
-that Jakarta XML Binding (JAXB) by default does not speak the new
-types. This library aims to address the issue by providing a collection of
+The new Date and Time API introduced in Java 8 (aka JSR-310) was a big step forward
+compared to what was available before in the JVM standard library.
+Sadly, Jakarta XML Binding (JAXB) does not speak the new types by default.
+
+This library aims to address this issue by providing a collection of
 [type adapters](https://jakarta.ee/specifications/xml-binding/4.0/apidocs/jakarta.xml.bind/jakarta/xml/bind/annotation/adapters/xmladapter)
-to enable use of Java 8 Date and Time API types in JAXB bindings.
+to enable use of the Java 8 Date and Time API types in JAXB bindings.
 
 In serialization/deserialization logic the library follows the ISO 8601
 standard formats wherever applicable.
