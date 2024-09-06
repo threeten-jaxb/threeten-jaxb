@@ -7,10 +7,13 @@
 
 New Date and Time API introduced in Java 8 (aka JSR-310) is a big step forward
 comparing to what were available before in the JVM standard library. Sad thing
-that Java Architecture for XML Binding (JAXB) by default do not speak the new
+that Jakarta XML Binding (JAXB) by default does not speak the new
 types. This library aims to address the issue by providing a collection of
-[type adapters](http://docs.oracle.com/javase/8/docs/api/javax/xml/bind/annotation/adapters/XmlAdapter.html)
+[type adapters](https://jakarta.ee/specifications/platform/9/apidocs/jakarta/xml/bind/annotation/adapters/xmladapter)
 to enable use of Java 8 Date and Time API types in JAXB bindings.
 
 In serialization/deserialization logic the library follows the ISO 8601
 standard formats wherever applicable.
+
+Version 2 of this library conforms to the new `jakarta.xml.bind` package names and libraries.
+If you are still using the old “javax” JAXB, please refer to [release 1.2](https://github.com/threeten-jaxb/threeten-jaxb/tree/v1.2).
